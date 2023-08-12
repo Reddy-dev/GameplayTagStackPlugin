@@ -1,6 +1,5 @@
 ﻿// Copyright Epic Games, Inc. All Rights Reserved.
 
-using System.IO;
 using UnrealBuildTool;
 
 public class GameplayTagStackPlugin : ModuleRules
@@ -39,7 +38,9 @@ public class GameplayTagStackPlugin : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				// ... add private dependencies that you statically link with here ...	
+				"NetCore",
+				"GameplayTags",
+				 
 			}
 			);
 		
