@@ -30,5 +30,5 @@ public:
 
 	UFUNCTION(BlueprintPure, BlueprintNativeEvent, Category = "GameplayTagStack")
 	int32 GetTagStack(FGameplayTag StatTag) const;
-	virtual int32 GetTagStack_Implementation(FGameplayTag StatTag) const { return 0; }
+	virtual int32 GetTagStack_Implementation(FGameplayTag StatTag) const { return -1; }
 };
