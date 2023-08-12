@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
+#include "GameplayTagStack.h"
 #include "UObject/Interface.h"
 #include "GameplayTagStackInterface.generated.h"
 
@@ -24,11 +25,15 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "GameplayTagStack")
 	void RemoveFromTagStack(FGameplayTag StatTag, int32 Value);
 
-	UFUNCTION(BlueprintPure, BlueprintNativeEvent, Category = "GameplayTagStack")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "GameplayTagStack")
 	bool HasTagStack(FGameplayTag StatTag) const;
 	virtual bool HasTagStack_Implementation(FGameplayTag StatTag) const { return false; }
 
-	UFUNCTION(BlueprintPure, BlueprintNativeEvent, Category = "GameplayTagStack")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "GameplayTagStack")
 	int32 GetTagStack(FGameplayTag StatTag) const;
 	virtual int32 GetTagStack_Implementation(FGameplayTag StatTag) const { return 0; }
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "GameplayTagStack")
+	FGameplayTagStackContainer GetTagStackContainer() const;
+	virtual FGameplayTagStackContainer GetTagStackContainer_Implementation() const { return FGameplayTagStackContainer(); }
 };
