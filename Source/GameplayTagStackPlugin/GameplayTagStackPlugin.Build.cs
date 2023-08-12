@@ -40,7 +40,6 @@ public class GameplayTagStackPlugin : ModuleRules
 				"SlateCore",
 				"NetCore",
 				"GameplayTags",
-				 
 			}
 			);
 		
